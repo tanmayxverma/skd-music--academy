@@ -255,6 +255,7 @@ footer {
 }
 
 /* Responsive */
+/* Hamburger Menu Mobile Styles */
 @media (max-width: 768px) {
   .nav-menu {
     display: none;
@@ -266,6 +267,7 @@ footer {
     gap: 20px;
     padding: 20px;
     border-radius: 10px;
+    z-index: 999;
   }
 
   .nav-menu.show {
@@ -279,3 +281,18 @@ footer {
     cursor: pointer;
   }
 }
+
+/* Ensure nav is visible on larger screens */
+@media (min-width: 769px) {
+  .nav-menu {
+    display: flex !important;
+    position: static;
+    flex-direction: row;
+    gap: 24px;
+  }
+
+  .hamburger {
+    display: none;
+  }
+}
+
