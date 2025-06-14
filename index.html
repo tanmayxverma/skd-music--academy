@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SKD Music Academy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+  <div class="container nav-container">
+    <div class="logo">SKD <span style="color:#ccc">MUSIC</span> ACADEMY</div>
+    <nav>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#instructor">Instructor</a></li>
+        <li><a href="#contact">Register</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="hero" id="hero">
+  <div class="hero-content">
+    <h1>Where Music Finds You 🎶</h1>
+    <p>Unlock your musical potential with expert guidance in a professional yet artistic environment.</p>
+    <a href="#contact" class="btn">Get in Touch</a>
+  </div>
+</section>
+
+<!-- About -->
+<section class="section" id="about">
+  <div class="container">
+    <h2>About SKD Music Academy</h2>
+    <p>SKD Music Academy is a professional music institute located in Vijaypur, Jammu & Kashmir, focused on nurturing talent in harmonium, tabla, vocals, and guitar.</p>
+    <p>Our environment is structured yet creative — perfect for both beginners and dedicated learners. Whether you want to pursue music as a passion or a profession, we’re here to guide your journey.</p>
+  </div>
+</section>
+
+<!-- Courses -->
+<section class="section shaded" id="courses">
+  <div class="container">
+    <h2>Our Courses</h2>
+    <div class="grid cards">
+      <div class="card"><h3>🎹 Harmonium</h3><p>Perfect for classical lovers</p><span class="tag">Budget-friendly</span></div>
+      <div class="card"><h3>🥁 Tabla</h3><p>Rhythm, balance, & flair</p><span class="tag">Monthly pricing</span></div>
+      <div class="card"><h3>🎤 Vocal</h3><p>Train your voice from scratch</p><span class="tag">Low-cost</span></div>
+      <div class="card"><h3>🎸 Guitar</h3><p>Acoustic & electric mastery</p><span class="tag">Affordable</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- Gallery -->
+<section class="section" id="gallery">
+  <div class="container">
+    <h2>Our Academy in Action</h2>
+    <div class="grid gallery-grid">
+      <img src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?auto=format&fit=crop&w=600&q=80" alt="Gallery" />
+      <img src="https://images.unsplash.com/photo-1616627986064-dc84ef02cd93?auto=format&fit=crop&w=600&q=80" alt="Gallery" />
+      <img src="https://images.unsplash.com/photo-1603326742652-2af59bbaa763?auto=format&fit=crop&w=600&q=80" alt="Gallery" />
+    </div>
+  </div>
+</section>
+
+<!-- Instructor -->
+<section class="section shaded" id="instructor">
+  <div class="container">
+    <h2>Meet Our Music Expert</h2>
+    <img src="https://via.placeholder.com/200" alt="Instructor" class="instructor-photo">
+    <p>With over 7+ years of experience, our teacher specializes in building strong foundations in music with a personal and professional approach. His expertise includes Indian Classical, Semi-Classical, and Instrumental performance arts.</p>
+  </div>
+</section>
+
+<!-- Contact / Register -->
+<section class="section" id="contact">
+  <div class="container">
+    <h2>Register / Contact Us</h2>
+    <div class="grid contact-grid">
+      <div>
+        <p><i class="fas fa-map-marker-alt"></i> Vijaypur, Jammu & Kashmir</p>
+        <p><i class="fas fa-phone"></i> +91 9797555421 </p>
+        <p><i class="fas fa-envelope"></i> info@skdmusicacademy.com</p>
+        <p><i class="fas fa-instagram"></i> skdmusicalacademy</p>
+      </div>
+      <!DOCTYPE html>
+<html>
+<head>
+  <title>WhatsApp Form</title>
+</head>
+<body>
+  <form id="whatsapp-form">
+  <input type="text" id="name" placeholder="Your Name" required>
+  <input type="tel" id="phone" placeholder="Phone Number" required>
+  <input type="email" id="email" placeholder="Email Address" required>
+  <input type="text" id="address" placeholder="Address" required>
+  <select id="course" required>
+    <option value="">Select Course</option>
+    <option value="Harmonium">Harmonium</option>
+    <option value="Tabla">Tabla</option>
+    <option value="Vocal">Vocal</option>
+    <option value="Guitar">Guitar</option>
+  </select>
+  <input type="number" id="age" placeholder="Age" required>
+  <textarea id="message" placeholder="Message or Enquiry (Optional)"></textarea>
+  <button class="btn" type="submit">Submit</button>
+</form>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("whatsapp-form");
+
+  if (!form) return;
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const address = document.getElementById("address").value.trim();
+    const course = document.getElementById("course").value;
+    const age = document.getElementById("age").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    // Validate required fields
+    if (!name || !phone || !email || !address || !course || !age) {
+      alert("Please fill in all required fields.");
+      return;
+    }
+
+    // Build WhatsApp message
+    const whatsappText = `*New SKD Music Academy Registration*%0A%0A` +
+                         `👤 Name: ${name}%0A` +
+                         `📞 Phone: ${phone}%0A` +
+                         `📧 Email: ${email}%0A` +
+                         `🏠 Address: ${address}%0A` +
+                         `🎵 Course: ${course}%0A` +
+                         `🎂 Age: ${age}%0A` +
+                         `📝 Message: ${message || 'N/A'}`;
+
+    // WhatsApp redirect
+    const whatsappNumber = "919797555421"; // <- your number without +
+    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${whatsappText}`;
+
+    window.open(whatsappURL, "_blank");
+  });
+});
+</script>
+
+  </script>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <p>&copy; 2025 SKD Music Academy • Designed by Tanmay Verma in India</p>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
