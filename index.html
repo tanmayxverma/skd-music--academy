@@ -169,5 +169,26 @@ document.addEventListener("DOMContentLoaded", function () {
 </footer>
 
 <script src="js/script.js"></script>
+
+  <script>
+document.addEventListener("DOMContentLoaded", function () {
+  const hamburger = document.getElementById("hamburger");
+  const navMenu = document.getElementById("nav-menu");
+
+  if (hamburger && navMenu) {
+    hamburger.addEventListener("click", function () {
+      navMenu.classList.toggle("show");
+    });
+
+    // Auto-close menu when any link is clicked (optional but clean)
+    document.querySelectorAll(".nav-menu a").forEach(link => {
+      link.addEventListener("click", () => {
+        navMenu.classList.remove("show");
+      });
+    });
+  }
+});
+</script>
+
 </body>
 </html>
